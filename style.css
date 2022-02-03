@@ -1,0 +1,65 @@
+:root {
+    --primary: rgba(253, 200, 48, 0.5);
+    --secondary: rgba(243, 115, 53, 0.5);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    background: linear-gradient(var(--primary), var(--secondary)), url(bg_img2.jpg) no-repeat center center;
+    background-size: cover;
+    font-family: 'Vonique 64';
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-weight: 900;
+    color: aliceblue
+}
+
+.buffer {
+    height: 100px;
+}
+
+.btn {
+    min-width: 130px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+.btn:hover:after {
+    width: 100%;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(204, 144, 14, 0.5);
+}
